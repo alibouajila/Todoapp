@@ -1,25 +1,37 @@
-import React, { useState } from 'react'
-import axios from 'axios'
-import './Create.css'
-function Create() {
-  const [task,setTask]=useState()
-  const handleAdd=()=>  {
-    axios.post('http://localhost:3001/add',{task:task}).then((res)=>{
-      console.log("res")
-    }).catch((err)=>{
-      console.log("err")
-    })
+import React, { useState } from 'react';
+import axios from 'axios';
+import './Create.css';
 
-  }
+function Create({ onTaskAdded }) {
+  const [task, setTask] = useState('');
+
+  const handleAdd = () => {
+    if (!task.trim()) return; 
+    axios
+      .post('http://localhost:3001/add', { task: task })
+      .then(() => {
+        setTask(''); 
+        if (onTaskAdded) onTaskAdded(); 
+      })
+      .catch((err) => {
+        console.error("Error while adding task:", err);
+      });
+  };
+
   return (
-    <div className='add-task'>
-        <h2>
-            <p id='title'> ADD A TASK</p>
-            <input placeholder='Enter a task' onChange={(e)=>setTask(e.target.value)}></input>
-        <button id='btn' onClick={handleAdd} type='button'>ADD</button>
-        </h2>
+    <div className="create-task">
+      <input
+        type="text"
+        placeholder="Enter a task"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+        className="task-input"
+      />
+      <button className="add-task-btn" onClick={handleAdd}>
+        Add Task
+      </button>
     </div>
-  )
+  );
 }
 
-export default Create
+export default Create;

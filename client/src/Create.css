@@ -1,11 +1,36 @@
-#title{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: large;
+.create-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.add-task {
-    border: solid black 2px;
-    width: 400px; 
-    margin: 0 auto; 
-    padding: 10px; 
-    text-align: center; 
+
+.task-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
 }
+
+.add-task-btn {
+  padding: 10px 15px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+  background-color: #006d5b;
+}
+ 

@@ -1,3 +1,60 @@
-.home{
-    text-align: center;
-}
+.home {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .tasks {
+    margin-top: 20px;
+  }
+  
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task.done span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .actions button:hover {
+    color: #000;
+  }
+  
+  .actions button[title="Delete"] {
+    color: #e63946;
+  }
+  
+  .actions button[title="Delete"]:hover {
+    color: #b22222;
+  }
+  
+  .actions button[title="Mark as Done"] {
+    color: #2a9d8f;
+  }
+  
+  .actions button[title="Mark as Done"]:hover {
+    color: #006d5b;
+  }
+  
