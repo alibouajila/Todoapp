@@ -1,0 +1,11 @@
+#title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+}
+.add-task {
+    border: solid black 2px;
+    width: 400px; 
+    margin: 0 auto; 
+    padding: 10px; 
+    text-align: center; 
+}
