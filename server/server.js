@@ -3,7 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const TaskModel = require('./models/task.js'); 
 
-mongoose.connect("mongodb://localhost:27017/taskmanager")
+mongoose.connect("mongodb://localhost:27017/taskmanager") // change this url to your mongodb url connection
   .then(() => {
     console.log('Connected to database');
   })
