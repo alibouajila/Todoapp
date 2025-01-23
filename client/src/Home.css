@@ -6,8 +6,7 @@
   
   .tasks {
     margin-top: 20px;
-  }
-  
+  } 
   .task {
     display: flex;
     justify-content: space-between;
@@ -22,7 +21,7 @@
   
   .task.done span {
     text-decoration: line-through;
-    color: #888;
+    color: #196d17a8;
   }
   
   .actions {
