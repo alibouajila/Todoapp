@@ -35,7 +35,7 @@ function Home() {
 
   return (
     <div className="home">
-      <h1>My Tasks</h1>
+      <h1 id='title'>My Tasks</h1>
       <Create onTaskAdded={fetchTasks} />
       <br />
       <div className="tasks">
